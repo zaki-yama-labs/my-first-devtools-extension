@@ -2,10 +2,9 @@ const path = require("path");
 
 module.exports = (_, argv) => ({
   entry: {
-    popup: path.join(__dirname, "src/popup/index.tsx"),
-    options: path.join(__dirname, "src/options/index.tsx")
+    devtools: path.join(__dirname, "src/devtools.ts")
   },
-  devtool: argv.mode === 'production' ? "" : 'inline-source-map',
+  devtool: argv.mode === "production" ? "" : "inline-source-map",
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].js"
